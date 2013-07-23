@@ -13,10 +13,14 @@
 
 - (void)startGyro
 {
-    NSOperationQueue *gyroQueue = [[NSOperationQueue alloc] init];
-    [gyroQueue setName:@"gryoQueue"];
-    [[CMMotionManager alloc] startGyroUpdatesToQueue:gyroQueue withHandler:^(CMGyroData *gyroData, NSError *error) {
-        NSLog(@"%@", gyroQueue);
-    }];
+    // Very broken
+    
+//    NSOperationQueue *gyroQueue = [[NSOperationQueue alloc] init];
+//    [gyroQueue setName:@"gryoQueue"];
+//    [[CMMotionManager alloc] startGyroUpdatesToQueue:[NSOperationQueue mainQueue]
+//        withHandler:^(CMGyroData *gyroData, NSError *error) {
+//        NSLog(@"%@", gyroData);
+//    }];
 }
+
 @end
