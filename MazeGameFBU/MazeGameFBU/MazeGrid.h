@@ -10,7 +10,13 @@
 
 @interface MazeGrid : SKSpriteNode
 
-- (instancetype)initWithRows:(NSInteger)rows andColumns:(NSInteger)columns;
+- (instancetype)initWithRows:(NSInteger)rows
+                     columns:(NSInteger)columns
+                squareLength:(float)length
+             backgroundColor:(SKColor *)color;
+
 - (void)placeBlockAtRow:(NSInteger)row andColumn:(NSInteger)column;
+- (void)placeStartAtRow:(NSInteger)row andColumn:(NSInteger)column;
+- (void)placeEndAtRow:(NSInteger)row andColumn:(NSInteger)column;
 
 @end

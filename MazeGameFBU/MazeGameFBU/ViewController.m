@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MyScene.h"
+#import "MotionController.h"
 
 @implementation ViewController
 
@@ -15,6 +16,9 @@
 {
     [super viewDidLoad];
 
+    // Init Motion Controller
+    MotionController *motionController = [[MotionController alloc] init];
+    
     // Configure the view.
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = YES;
@@ -26,6 +30,9 @@
     
     // Present the scene.
     [skView presentScene:scene];
+    
+    // Start motion
+    [motionController startGyro];
 }
 
 - (BOOL)shouldAutorotate

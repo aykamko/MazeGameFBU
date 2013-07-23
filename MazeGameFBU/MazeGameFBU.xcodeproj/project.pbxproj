@@ -24,8 +24,11 @@
 		7C3E09FB179DA2C00026756D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C3E09D6179DA2C00026756D /* UIKit.framework */; };
 		7C3E0A03179DA2C00026756D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C3E0A01179DA2C00026756D /* InfoPlist.strings */; };
 		7C3E0A05179DA2C00026756D /* MazeGameFBUTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E0A04179DA2C00026756D /* MazeGameFBUTests.m */; };
-		7C3E0A0F179DA66D0026756D /* 1.1 in Resources */ = {isa = PBXBuildFile; fileRef = 7C3E0A0E179DA66D0026756D /* 1.1 */; };
 		7C7882BA179DDE6500EA517F /* MazeGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7882B9179DDE6500EA517F /* MazeGrid.m */; };
+		7C7882BD179DECAD00EA517F /* PlainTextMazeParserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7882BC179DECAD00EA517F /* PlainTextMazeParserModel.m */; };
+		7C7882BF179DF52A00EA517F /* 1-1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7C7882BE179DF52A00EA517F /* 1-1.txt */; };
+		7C7882C3179E073300EA517F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7882C2179E073300EA517F /* CoreMotion.framework */; };
+		7CCC2C79179EE45700805717 /* MotionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC2C78179EE45700805717 /* MotionController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +65,14 @@
 		7C3E0A00179DA2C00026756D /* MazeGameFBUTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MazeGameFBUTests-Info.plist"; sourceTree = "<group>"; };
 		7C3E0A02179DA2C00026756D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7C3E0A04179DA2C00026756D /* MazeGameFBUTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MazeGameFBUTests.m; sourceTree = "<group>"; };
-		7C3E0A0E179DA66D0026756D /* 1.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = 1.1; sourceTree = "<group>"; };
 		7C7882B8179DDE6500EA517F /* MazeGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeGrid.h; sourceTree = "<group>"; };
 		7C7882B9179DDE6500EA517F /* MazeGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MazeGrid.m; sourceTree = "<group>"; };
+		7C7882BB179DECAD00EA517F /* PlainTextMazeParserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlainTextMazeParserModel.h; sourceTree = "<group>"; };
+		7C7882BC179DECAD00EA517F /* PlainTextMazeParserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlainTextMazeParserModel.m; sourceTree = "<group>"; };
+		7C7882BE179DF52A00EA517F /* 1-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-1.txt"; sourceTree = "<group>"; };
+		7C7882C2179E073300EA517F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		7CCC2C77179EE45700805717 /* MotionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionController.h; sourceTree = "<group>"; };
+		7CCC2C78179EE45700805717 /* MotionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C7882C3179E073300EA517F /* CoreMotion.framework in Frameworks */,
 				7C3E09D5179DA2C00026756D /* CoreGraphics.framework in Frameworks */,
 				7C3E09D7179DA2C00026756D /* UIKit.framework in Frameworks */,
 				7C3E09D9179DA2C00026756D /* SpriteKit.framework in Frameworks */,
@@ -114,6 +123,7 @@
 		7C3E09D1179DA2C00026756D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C7882C2179E073300EA517F /* CoreMotion.framework */,
 				7C3E09D2179DA2C00026756D /* Foundation.framework */,
 				7C3E09D4179DA2C00026756D /* CoreGraphics.framework */,
 				7C3E09D6179DA2C00026756D /* UIKit.framework */,
@@ -131,8 +141,12 @@
 				7C3E09E6179DA2C00026756D /* Main.storyboard */,
 				7C3E09E9179DA2C00026756D /* ViewController.h */,
 				7C3E09EA179DA2C00026756D /* ViewController.m */,
+				7CCC2C77179EE45700805717 /* MotionController.h */,
+				7CCC2C78179EE45700805717 /* MotionController.m */,
 				7C3E09EC179DA2C00026756D /* MyScene.h */,
 				7C3E09ED179DA2C00026756D /* MyScene.m */,
+				7C7882BB179DECAD00EA517F /* PlainTextMazeParserModel.h */,
+				7C7882BC179DECAD00EA517F /* PlainTextMazeParserModel.m */,
 				7C7882B8179DDE6500EA517F /* MazeGrid.h */,
 				7C7882B9179DDE6500EA517F /* MazeGrid.m */,
 				7C3E09EF179DA2C00026756D /* Spaceship.png */,
@@ -175,7 +189,7 @@
 		7C3E0A10179DA6770026756D /* Mazes */ = {
 			isa = PBXGroup;
 			children = (
-				7C3E0A0E179DA66D0026756D /* 1.1 */,
+				7C7882BE179DF52A00EA517F /* 1-1.txt */,
 			);
 			name = Mazes;
 			sourceTree = "<group>";
@@ -259,8 +273,8 @@
 				7C3E09DF179DA2C00026756D /* InfoPlist.strings in Resources */,
 				7C3E09F2179DA2C00026756D /* Images.xcassets in Resources */,
 				7C3E09F0179DA2C00026756D /* Spaceship.png in Resources */,
+				7C7882BF179DF52A00EA517F /* 1-1.txt in Resources */,
 				7C3E09E8179DA2C00026756D /* Main.storyboard in Resources */,
-				7C3E0A0F179DA66D0026756D /* 1.1 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +298,8 @@
 				7C3E09E5179DA2C00026756D /* AppDelegate.m in Sources */,
 				7C3E09E1179DA2C00026756D /* main.m in Sources */,
 				7C7882BA179DDE6500EA517F /* MazeGrid.m in Sources */,
+				7C7882BD179DECAD00EA517F /* PlainTextMazeParserModel.m in Sources */,
+				7CCC2C79179EE45700805717 /* MotionController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
