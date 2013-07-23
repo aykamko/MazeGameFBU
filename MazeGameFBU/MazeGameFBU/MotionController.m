@@ -9,6 +9,9 @@
 #import "MotionController.h"
 #import <CoreMotion/CoreMotion.h>
 
+@interface MotionController ()
+@property (nonatomic, strong) CMMotionManager *motionManager;
+@end
 @implementation MotionController
 
 - (void)startGyro
@@ -17,10 +20,20 @@
     
 //    NSOperationQueue *gyroQueue = [[NSOperationQueue alloc] init];
 //    [gyroQueue setName:@"gryoQueue"];
-//    [[CMMotionManager alloc] startGyroUpdatesToQueue:[NSOperationQueue mainQueue]
-//        withHandler:^(CMGyroData *gyroData, NSError *error) {
-//        NSLog(@"%@", gyroData);
-//    }];
+//    
+//    self.motionManager = [[CMMotionManager alloc] init];
+//    
+//    if ([self.motionManager isGyroAvailable]) {
+//        if ([self.motionManager isGyroActive] == NO) {
+//            [self.motionManager setGyroUpdateInterval:1.0f / 2.0f];
+//            [[CMMotionManager alloc] startGyroUpdatesToQueue:[NSOperationQueue mainQueue]
+//                withHandler:^(CMGyroData *gyroData, NSError *error) {
+//                NSLog(@"%@", gyroData);
+//            }];
+//        }
+//    } else {
+//        NSLog(@"Gyro not available");
+//    }
 }
 
 @end
